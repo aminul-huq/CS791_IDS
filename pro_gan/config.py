@@ -2,13 +2,13 @@ import cv2
 import torch
 from math import log2
 
-START_TRAIN_AT_IMG_SIZE = 256
+START_TRAIN_AT_IMG_SIZE = 4
 DATASET = '/home/aminul/CVL/data/malignant_benign_1024'
 CHECKPOINT_GEN = "generator_"
 CHECKPOINT_CRITIC = "critic_"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 SAVE_MODEL = True
-LOAD_MODEL = True
+LOAD_MODEL = False
 LEARNING_RATE = 5e-6
 BATCH_SIZES = [32, 32, 32, 16, 16, 16, 16, 8, 4]
 CHANNELS_IMG = 1
